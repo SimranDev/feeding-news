@@ -12,7 +12,8 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "postinstall": "manypkg check",
-    "pkg-fix": "manypkg fix"
+    "pkg-fix": "manypkg fix",
+    "prepare": "husky install"
   },
   "engines": {
     "node": ">=14.0.0"
@@ -20,8 +21,10 @@
   "dependencies": {
     "@manypkg/cli": "^0.20.0",
     "eslint-config-custom": "0.0.0",
-    "prettier": "latest",
-    "turbo": "latest"
+    "husky": "^8.0.0",
+    "prettier": "^2.8.7",
+    "turbo": "latest",
+    "typescript": "^5.0.2"
   },
   "packageManager": "pnpm@7.13.5"
 }
