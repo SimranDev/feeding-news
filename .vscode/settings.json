@@ -13,5 +13,5 @@
   "importSorter.importStringConfiguration.trailingComma": "multiLine",
   "importSorter.sortConfiguration.removeUnusedImports": true,
   "importSorter.sortConfiguration.removeUnusedDefaultImports": true,
-  "cSpell.words": ["commitlint", "daisyui", "manypkg", "nextjs", "tailwindcss"]
+  "cSpell.words": ["commitlint", "daisyui", "Designernews", "manypkg", "nextjs", "tailwindcss", "tsup"]
 }
