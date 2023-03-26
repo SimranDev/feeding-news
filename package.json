@@ -13,18 +13,30 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "postinstall": "manypkg check",
     "pkg-fix": "manypkg fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "npm exec --workspaces -- shx rm -rf node_modules .next .turbo coverage dist compiled build-next-static build-storybook-static && shx rm -rf node_modules",
+    "remove-turbo-cache": "shx rm -rf ./node_modules/.cache/turbo"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "dependencies": {
+    "@commitlint/cli": "^17.5.0",
+    "@commitlint/config-conventional": "^17.4.4",
     "@manypkg/cli": "^0.20.0",
     "eslint-config-custom": "0.0.0",
     "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
+    "shx": "^0.3.4",
     "turbo": "latest",
     "typescript": "^5.0.2"
   },
-  "packageManager": "pnpm@7.13.5"
+  "packageManager": "pnpm@7.13.5",
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
